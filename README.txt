@@ -23,7 +23,7 @@ histidine kinase - phosphorylated', 'CreC', 'CreB-Phosphorylated
 DNA-binding transcriptional regulator']
 
 For the complete list of implemented LISP functions and their Python
-equivalents, see doc/functions.txt. Optional and keyword arguments are
+equivalents, see docs/functions.txt. Optional and keyword arguments are
 supported.
 
 INSTALLATION
@@ -149,12 +149,16 @@ refer to the same database, for instance, but pycyc.open('eco') and
 pycyc.open('ecoli') will yield apparently different interfaces and two
 copies of the same frame, one retrieved from each instance, will be unequal.)
 
-TESTING
--------
+TESTING 
+------- 
 A comprehensive test suite is provided in the subpackage pycyc.test.
-However, the tests rely on assumptions about specific properties of 
-frames in EcoCyc and may fail if that database changes, even though the
-PyCyc implementation of the tested functions remains correct! 
+However, the tests rely on assumptions about specific properties of
+frames in EcoCyc and may fail if that database changes, even though
+the PyCyc implementation of the tested functions remains correct!
+
+(To prevent unexpected changes to local databases when running the 
+tests, the test script for the functions which write to the database is
+not distributed by default.)
 
 Test scripts depend on the nose package.
 
