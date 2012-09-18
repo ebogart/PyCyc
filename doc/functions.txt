@@ -1,0 +1,234 @@
+IMPLEMENTED FUNCTIONS (lisp name, python name)
+
+Except where noted, the listed Python names are methods of the
+PathwayToolsInterface class. (Some of the same functions may be accessed
+through the Frame class.)
+
+DNA-binding-sites-of-protein, dna_binding_sites_of_protein
+activated-or-inhibited-by-compound, activated_or_inhibited_by_compound
+activation-p, activation
+add-slot-value, add_slot_value
+adjacent-genes?, adjacent_genes
+all-cofactors, all_cofactors
+all-direct-forms-of-protein, all_direct_forms_of_protein
+all-enzymes, all_enzymes
+all-forms-of-protein, all_forms_of_protein
+all-genetic-regulation-proteins, all_genetic_regulation_proteins
+all-modulators, all_modulators
+all-operons, all_operons
+all-orgs, pycyc.all_orgs
+all-pathways, all_pathways
+all-products-of-gene, all_products_of_gene
+all-protein-complexes, all_protein_complexes
+all-rxns, all_rxns
+all-sigma-factors, all_sigma_factors
+all-substrates, all_substrates
+all-transcription-factors, all_transcription_factors
+all-transported-chemicals, all_transported_chemicals
+all-transporters, all_transporters
+all-transporters-across, all_transporters_across
+autocatalytic-reactions-of-enzyme, autocatalytic_reactions_of_enzyme
+base-components-of-protein, base_components_of_protein
+binding-site->regulators, binding_site_to_regulators
+binding-site-promoters, binding_site_promoters
+binding-site-transcription-factors, binding_site_transcription_factors
+binding-site-transcription-units, binding_site_transcription_units
+binding-sites-affecting-gene, binding_sites_affecting_gene
+chromosome-of-gene, chromosome_of_gene
+chromosome-of-object, chromosome_of_object
+chromosome-of-operon, chromosome_of_operon
+class-all-sub-of-p, is_class_all_sub_of
+class-all-type-of-p, is_class_all_type_of
+class-p, is_class
+coercible-to-frame-p, is_coercible_to_frame
+cofactors-and-pgroups-of-enzrxn, cofactors_and_pgroups_of_enzrxn
+compartments-of-reaction, compartments_of_reaction
+complex-p, complex
+components-of-protein, components_of_protein
+compounds-of-pathway, compounds_of_pathway
+connecting-genes, connecting_genes
+containers-of, containers_of
+containing-chromosome, containing_chromosome
+containing-tus, containing_tus
+cotranscribed-genes, cotranscribed_genes
+create-class, create_class	
+create-frame, create_frame	
+create-instance, create_instance	
+create-instance-w-generated-id, create_instance_w_generated_id
+delete-frame, delete_frame 		
+direct-activators, direct_activators
+direct-inhibitors, direct_inhibitors
+direct-regulators, direct_regulators
+dna-binding-site-p, dna_binding_site
+enzrxn-activators, enzrxn_activators
+enzrxn-inhibitors, enzrxn_inhibitors
+enzyme-activity-name, enzyme_activity_name
+enzyme?, enzyme
+enzymes-of-gene, enzymes_of_gene
+enzymes-of-organism-in-meta, enzymes_of_organism_in_meta
+enzymes-of-pathway, enzymes_of_pathway
+enzymes-of-reaction, enzymes_of_reaction
+fequal, fequal
+find-indexed-frame, find_indexed_frame
+full-enzyme-name, full_enzyme_name
+gene-clusters, gene_clusters
+gene-p, gene
+gene-transcription-units, gene_transcription_units
+genes-in-same-operon, genes_in_same_operon
+genes-of-pathway, genes_of_pathway
+genes-of-protein, genes_of_protein
+genes-of-proteins, genes_of_proteins
+genes-of-reaction, genes_of_reaction
+genes-regulated-by-gene, genes_regulated_by_gene
+genes-regulated-by-protein, genes_regulated_by_protein
+genes-regulating-gene, genes_regulating_gene
+get-class-all-instances, get_class_all_instances
+get-class-all-subs, get_class_all_subs
+get-frame-labeled, get_frame_labeled
+get-frame-slots, get_frame_slots	
+get-gene-sequence, get_gene_sequence
+get-instance-all-types, get_instance_all_types
+get-instance-direct-types, get_instance_direct_types
+get-name-string, get_name_string
+get-predecessors, get_predecessors
+get-reaction-list, get_reaction_list
+get-slot-value, get_slot_value
+get-slot-values, get_slot_values
+get-successors, get_successors
+homomultimeric-containers-of, homomultimeric_containers_of
+inhibition-p, inhibition
+instance-all-instance-of-p, instance_all_instance_of
+instance-p, is_instance
+leader-peptide?, leader_peptide
+lower-taxa-or-species-p, lower_taxa_or_species
+member-slot-value-p, member_slot_value
+modified-and-unmodified-forms, modified_and_unmodified_forms
+modified-containers, modified_containers
+modified-forms, modified_forms
+monomers-of-protein, monomers_of_protein
+neighboring-genes-p, neighboring_genes
+next-gene-on-replicon, next_gene_on_replicon
+noncontiguous-pathway-p, noncontiguous_pathway
+nonspecific-forms-of-rxn, nonspecific_forms_of_rxn
+nucleotide->protein-sequence, nucleotide_to_protein_sequence
+operon-of-gene, operon_of_gene
+pathway-allows-enzrxn?, pathway_allows_enzrxn
+pathway-components, pathway_components
+pathway-hole-p, pathway_hole
+pathways-of-enzrxn, pathways_of_enzrxn
+pathways-of-gene, pathways_of_gene
+phantom-gene-p, phantom_gene
+polypeptide-or-homomultimer-p, polypeptide_or_homomultimer
+previous-gene-on-replicon, previous_gene_on_replicon
+promoter-binding-sites, promoter_binding_sites
+protein-coding-gene?, protein_coding_gene
+protein-or-rna-containers-of, protein_or_rna_containers_of
+protein-p, protein
+pseudo-gene-p, pseudo_gene
+put-slot-value, put_slot_value
+put-slot-values, put_slot_values
+put_instance_types put-instance-types
+pwys-of-organism-in-meta, pwys_of_organism_in_meta
+reaction-reactants-and-products, reaction_reactants_and_products
+reaction-type, reaction_type	
+reaction-type?, is_reaction_of_type
+reaction-without-sequenced-enzyme-p, reaction_without_sequenced_enzyme
+reactions-of-compound, reactions_of_compound
+reactions-of-enzyme, reactions_of_enzyme
+reactions-of-gene, reactions_of_gene
+reactions-of-protein, reactions_of_protein
+reduce-modified-proteins, reduce_modified_proteins
+regulation-frame-transcription-units, regulation_frame_transcription_units
+regulator-of-type?, regulator_of_type
+regulator-proteins-of-transcription-unit, regulator_proteins_of_transcription_unit
+regulators-of-gene, regulators_of_gene
+regulators-of-operon-transcription, regulators_of_operon_transcription
+regulon-of-protein, regulon_of_protein
+remove-slot-value, remove_slot_value
+replace-slot-value, replace_slot_value
+revert-kb, revert_kb	
+rna-coding-gene?, rna_coding_gene
+rxn-in-compartment-p, rxn_in_compartment
+rxn-present?, rxn_present
+rxn-specific-form-of-rxn-p, rxn_specific_form_of_rxn
+rxn-w-isozymes-p, rxn_w_isozymes
+rxns-catalyzed-by-complex, rxns_catalyzed_by_complex
+rxns-w-isozymes, rxns_w_isozymes		
+save-kb, save_kb	
+slot-p, is_slot
+small-molecule-cplxes-of-prot, small_molecule_cplxes_of_prot
+species-of-protein, species_of_protein
+specific-forms-of-rxn, specific_forms_of_rxn
+substrate-of-generic-rxn?, substrate_of_generic_rxn
+substrates-of-pathway, substrates_of_pathway
+substrates-of-reaction, substrates_of_reaction
+terminatorp, terminator
+terminators-affecting-gene, terminators_affecting_gene
+tfs-bound-to-compound, tfs_bound_to_compound
+top-containers, top_containers
+transcription-factor-active-forms, transcription_factor_active_forms
+transcription-factor-ligands, transcription_factor_ligands
+transcription-factor?, transcription_factor
+transcription-unit-activation-frames, transcription_unit_activation_frames
+transcription-unit-activators, transcription_unit_activators
+transcription-unit-all-components, transcription_unit_all_components
+transcription-unit-binding-sites, transcription_unit_binding_sites
+transcription-unit-first-gene, transcription_unit_first_gene
+transcription-unit-genes, transcription_unit_genes
+transcription-unit-inhibition-frames, transcription_unit_inhibition_frames
+transcription-unit-inhibitors, transcription_unit_inhibitors
+transcription-unit-mrna-binding-sites, transcription_unit_mrna_binding_sites
+transcription-unit-promoter, transcription_unit_promoter
+transcription-unit-regulation-frames, transcription_unit_regulation_frames
+transcription-unit-terminators, transcription_unit_terminators
+transcription-unit-transcription-factors, transcription_unit_transcription_factors
+transcription-units-of-gene, transcription_units_of_gene
+transcription-units-of-promoter, transcription_units_of_promoter
+transcription-units-of-protein, transcription_units_of_protein
+transported-chemicals, transported_chemicals
+transporter?, transporter
+unmodified-form, unmodified_form
+unmodified-gene-product, unmodified_gene_product
+unmodified-gene-products, unmodified_gene_products
+unmodified-or-unbound-form, unmodified_or_unbound_form
+variants-of-pathway, variants_of_pathway
+
+
+UNIMPLEMENTED FUNCTIONS (name, source, excuse)
+abbreviate-species-name, API, incomplete documentation in API
+compartment-of-rxn, API, function doesn't exist
+current-kb, gfp, meaningless in this design (try interface._org_id instead)
+find-indexed-frames, javacyc, function doesn't exist
+find-pgdbs, ptools-fns, function doesn't exist
+format-organism-name, API, incomplete documentation in API
+frame-organism-name, API, incomplete documentation in API
+get-class-slot-slotvalue, perlcyc and javacyc, function doesn't exist
+get-frames-matching-value, perlcyc, perlcyc doesn't support it either and I can find no other documentation to explain what arguments it takes
+org-name, API, incomplete documentation in API
+orgkb-name-equalp, API, incomplete documentation in API
+orgkb-organism-name, API, incomplete documentation in API
+orgkb-species-name-w-strain, API, incomplete documentation in API
+print-frame, gfp, can't capture standard output from server process
+products-of-reaction, javacyc, function doesn't exist (marked as hypothetical in JavaCyc)
+protein-in-compartment-p, API, function doesn't exist
+rxn-name-string, API, incomplete documentation in API
+rxns-adjacent-in-pwy-p, API, calling this raises "Error: Attempt to take the car of "Unbound Value" which is not listp. [condition type: TYPE-ERROR]"
+select-organism, ptools-fns, meaningless in this design (create another interface object instead)
+species-initials, API, incomplete documentation in API
+subunit-name, API, incomplete documentation in API
+transcription_unit_of_gene, perlcyc, not otherwise documented- not actually implemented in perlcyc- lisp function does not exist
+transcription-unit-name, API, incomplete documentation in API
+
+'function doesn't exist' is shorthand for 'calling function target-fn raises "Error: attempt to call `TARGET-FN' which is an undefined function. [condition type: UNDEFINED-FUNCTION]'.
+
+
+Source abbreviations:
+
+gfp: http://bioinformatics.ai.sri.com/ptools/gfp.html
+gfp-spec: http://www.ai.sri.com/~gfp/spec/paper/paper.html
+ptools-fns: http://bioinformatics.ai.sri.com/ptools/ptools-fns.html
+API: http://bioinformatics.ai.sri.com/ptools/api/
+
+
+
+
