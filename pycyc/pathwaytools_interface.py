@@ -402,43 +402,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
             type = ':' + type
         return self.call("all-rxns", type)
 
-    # def all_rxns(self, type='smm'):
-    #     """ Return all reactions in the current organism.
-
-    #     Arguments
-    #     ---------
-    #     type: String specifying the type of reaction to list. According to
-    #         ptools-fns.html, the options are:
-    #         'all': All reactions.
-    #         'smm': All reactions whose substrates are all small molecules,
-    #             plus all reactions that are members of pathways of small-
-    #             molecule metabolism.  Note that 'smm' will often return more
-    #             reactions than does 'small-molecule' because some pathways of
-    #             small-molecule metabolism contain reactions involving
-    #             macromolecules, e.g., ACP.
-    #         'small-molecule': All reactions whose substrates are all small
-    #              molecules, as opposed to macromolecules.
-    #         'enzyme': All enzyme-catalyzed reactions  (instances
-    #             of classes EC-Reactions or Unclassified-Reactions).
-    #         'transport': All transport reactions.
-    #         'dna': All DNA Binding Reactions.
-
-    #         However, in version 16.0 (August 2012), the options appear to
-    #         be 'all', 'protein-small-molecule-reaction', 'protein-reaction',
-    #         'trna-reaction', 'spontaneous', 'enzyme', 'small-molecule',
-    #         'metab-pathways', 'metab-smm', 'smm', 'metab-all', and 
-    #         'transport'.
-
-    #     Returns
-    #     -------
-    #     All reactions of the specified type in the current organism.  
-
-    #     LISP equivalent: all-rxns (&optional  (type :smm))
-
-    #     """
-    #     type = ':' + type
-    #     return self.call("all-rxns", type)
-
     def all_sigma_factors(self):
         """ Enumerate all RNA polymerase sigma factors.
 
@@ -767,29 +730,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         """
         return self.call("cofactors-and-pgroups-of-enzrxn", enzrxn)
 
-    # def compartment_of_rxn(self, rxn, default='default'):
-    # # Though described in the API, this turns out not to exist
-    # # as of 16.0.
-    #     """ Returns the compartment of a non-transport reaction.
-
-    #     Arguments
-    #     ---------
-    #     rxn: An instance of the class |Reactions|.
-    #     default: The default compartment for reactions without any
-    #         compartment annotations on their substrates. The default
-    #         value is 'CCO-CYTOSOL'.
-
-    #     Returns
-    #     -------
-    #     A child of the class 'CCO.
-
-    #     LISP equivalent: compartment-of-rxn
-
-    #     """
-    #     if default == 'default':
-    #         default = 'CCO-CYTOSOL'
-    #     return self.call("compartment-of-rxn", rxn, default)
-
     def compartments_of_reaction(self, rxn,  
                                  sides=['LEFT', 'RIGHT'],
                                  default_compartment='CCO-CYTOSOL'):
@@ -993,23 +933,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         """
         return self.call("create-instance-w-generated-id", class_)
 
-    # def current_kb():
-    #     """ Return the currently selected KB.
-
-    #     Arguments
-    #     ---------
-    #     None.
-
-    #     Returns
-    #     -------
-    #     The currently selected KB.
-
-    #     LISP equivalent: current-kb ()
-
-    #     """
-    #     return self.call("current-kb")
-
-
     def direct_activators(self, item):
         """ List entities directly activating an item that can be regulated. 
 
@@ -1047,8 +970,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
 
         """
         return self.call("direct-inhibitors", item)
-
-    # GFP functions
 
     def direct_regulators(self, x, filter_fn=None):
         """ List direct regulators of an object.
@@ -1297,27 +1218,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
 
         return self.multiple_value_list_call('find-indexed-frame', datum, 
                                              class_)
-
-    # def find_pgdbs(self, substring=None):
-    #     """ Return a list of PGDBs where organism names contain a substring.
-
-    #     If no substring is specified, this function returns all PGDBs.
-    #     Searching is case-insensitive, and spaces and punctuation
-    #     characters are ignored.
-
-    #     Arguments
-    #     ---------
-    #     substring: a string
-
-    #     Returns
-    #     -------
-    #     A list of PGDBs (orgkb-defstructs) for all organisms whose names
-    #     contain the specified substring.  
-
-    #     LISP equivalent: find-pgdbs (&optional substring)
-
-    #     """
-    #     return self.call("find-pgdbs", substring)
 
     def full_enzyme_name(self, enzyme):
         """ Return a string describing the full name of the enzyme.
@@ -2419,20 +2319,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         """
         return self.multiple_value_list_call("previous-gene-on-replicon", g)
 
-    # def print_frame(self, frame):
-    #     """ Prints a description of frame to standard output
-
-    #     Prints a description of frame to standard output.
-
-    #     Arguments
-    #     ---------
-    #     frame: A frame id or object.
-
-    #     LISP equivalent: print-frame (frame)
-
-    #     """
-    #     self.call("print-frame", frame)
-
     def promoter_binding_sites(self, promoter):
         """ List the binding sites associated with the given promoter.
 
@@ -2483,44 +2369,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
 
         """
         return self.call("protein-coding-gene?", gene)
-
-    # def protein_in_compartment(self, rxn, compartments, default_ok='default', 
-    #                            pwy='default', loose='default'):
-    #     """ A predicate that checks if the given reaction is present in
-
-    #     A predicate that checks if the given reaction is present in a list
-    #     of cellular compartments.
-
-    #     Arguments
-    #     ---------
-    #     default_ok: If true, then we return true if the reaction has no
-    #         associated compartment information, or one of its associated
-    #         locations is a super-class of one of the members of the
-    #         compartments argument.
-    #     rxn: An instance of the class |Reactions|.
-    #     pwy: If supplied, the search for associated enzymes of the
-    #         argument rxn is limited to the given child of |Pathways|.
-    #     loose: If true, then the compartments 'CCO-CYTOPLASM and 'CCO-
-    #         CYTOSOL are treated as being the same compartment.
-    #     compartments: A list of cellular compartments, as defined in the
-    #         Cellular Components Ontology. See frame 'CCO.
-
-    #     Returns
-    #     -------
-    #     A boolean value.
-
-    #     LISP equivalent: protein-in-compartment-p
-
-    #     """
-    #     kwargs = {}
-    #     if default_ok != 'default':
-    #         kwargs['default-ok?'] = default_ok
-    #     if pwy != 'default':
-    #         kwargs['pwy'] = pwy
-    #     if loose != 'default':
-    #         kwargs['loose?'] = loose
-    #     return self.call("protein-in-compartment-p", rxn,
-    #                      compartments, **kwargs)
 
     def protein_or_rna_containers_of(self, protein, exclude_self=False):
         """ Find protein[-RNA] complexes containing a given protein.
@@ -3008,24 +2856,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         """
         return self.call("rxn-w-isozymes-p", rxn)
 
-    # def rxns_adjacent_in_pwy(self, rxn1, rxn2, pwy):
-    #     """ Determine if reactions are adjacent to one another in pathway.
-
-    #     Arguments
-    #     ---------
-    #     rxn1: An instance of the class |Reactions|.
-    #     rxn2: An instance of the class |Reactions|.
-    #     pwy: An instance of the class |Pathways|.
-
-    #     Returns
-    #     -------
-    #     A boolean value.
-
-    #     LISP equivalent: rxns-adjacent-in-pwy-p
-
-    #     """
-    #     return self.call("rxns-adjacent-in-pwy-p", rxn1, rxn2, pwy)
-
     def rxns_catalyzed_by_complex(self, rxns='default'):
         """ List reactions catalyzed by a protein complex.
 
@@ -3073,39 +2903,6 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
             kwargs['rxns'] = rxns
         return self.call("rxns-w-isozymes", **kwargs)
 
-    # def select_organism(self, org_id=None):
-    #     """ Select the organism whose organism identifier is org_id.
-
-    #     Selects the organism whose organism identifier is Org-ID as the
-    #     currently selected organism within the Pathway Tools, such as by
-    #     making the Ocelot KB for this organism the currently selected KB.
-    #     Subsequent KB operations (such as GFP operations) will by default
-    #     refer to the KB for that organism.
-
-    #     Arguments
-    #     ---------
-    #     org_id: An organism identifier, which must be a Lisp symbol.  The
-    #         organism identifier is usually the identifer at the front of the
-    #         "*cyc" directory name for the organism.
-
-    #     Returns
-    #     -------
-    #     None.
-
-    #     Example
-    #     -------
-    #     >>> ecocyc.select_organism(org_id='ecoli')
-
-    #     LISP equivalent: select-organism (&key org-id)
-
-    #     """
-    #     kwargs = {}
-    #     kwargs['org-id'] = org_id
-    #     return self.call("select-organism", **kwargs)
-
-
-    # ptools-fns.html lists this function, but it is not available
-    # in my installation as of 23 August 2012:
     def small_molecule_cplxes_of_prot(self, protein):
         """ List forms of protein that are complexes with small molecules.
 
@@ -3913,10 +3710,8 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         LISP equivalent: add-slot-value
 
         """
-        return self.call("add-slot-value", frame, slot, value)
         # http://www.ai.sri.com/~gfp/spec/paper/node29.html#3765
-
-### Test and verify return values from here down
+        return self.call("add-slot-value", frame, slot, value)
 
     def create_frame(self, name, types=[], supers=[]):
         """ Create a new frame.
@@ -4024,5 +3819,4 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         
         """
         # http://www.ai.sri.com/~gfp/spec/paper/node24.html#3471
-
         return self.call('delete-frame', frame)
