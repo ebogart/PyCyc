@@ -121,11 +121,13 @@ Classes contain their subclasses:
 True
 
 Wherever a LISP function returns a LISP symbol not starting with ':', a
-corresponding Frame object is returned in Python. (Though generally
+corresponding Frame object is returned in Python. Though generally
 helpful, this occasionally is an annoyance, if the symbol does not
 actually represent a frame in the database, or if it is necessary
-to interact with the frame name as a string; in the latter case,
-str(frame) will work.)
+to interact with the frame name as a string. (In the latter case,
+str(frame) will work.) This feature may be removed or made optional in
+later versions if it proves to be more trouble than it's worth; feedback 
+is welcome.
 
 KNOWN ISSUES
 ------------
@@ -162,13 +164,20 @@ not distributed by default.)
 
 Test scripts depend on the nose package.
 
-CREDITS
--------
-Most docstring text is taken verbatim or with minor modifications from 
-one of the following sources: 
+SOURCES 
+------- 
+Most docstring text is taken with minor modifications from one of the
+following sources:
 
 http://bioinformatics.ai.sri.com/ptools/api/
 http://bioinformatics.ai.sri.com/ptools/ptools-fns.html
 http://bioinformatics.ai.sri.com/ptools/gfp.html
 http://www.ai.sri.com/~gfp/spec/paper/paper.html
 
+LICENSE
+-------
+Distributed under the BSD license; see LICENSE.txt.
+
+AUTHOR
+------
+Eli Bogart, elb87@cornell.edu
