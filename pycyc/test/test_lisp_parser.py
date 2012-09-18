@@ -6,8 +6,8 @@ Testing the database-bound parser depends on the availability of EcoCyc.
 """
 
 import pycyc
-from lisp_parser import LispParser, DatabaseSpecificLispParser, LispParserError
-from frame import Frame
+from pycyc.lisp_parser import LispParser, DatabaseSpecificLispParser, LispParserError
+from pycyc.frame import Frame
 from nose.tools import raises, assert_is_instance
 
 example = '(LOREM "IPSUM (DOLOR) SIT" 9.8 (AMET () ";?\n# -" 161) PPI)'

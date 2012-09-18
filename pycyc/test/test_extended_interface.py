@@ -17,7 +17,7 @@ interface class method docstrings or the LISP API documentation.
 
 import pycyc
 from nose.tools import raises, assert_is_instance, assert_raises
-from frame import Frame
+from pycyc.frame import Frame
 
 # Specify the values which should be returned for true and false queries
 # (which may change in the future)

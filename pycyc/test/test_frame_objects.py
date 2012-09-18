@@ -10,7 +10,7 @@ purposes change in certain ways due to database updates.
 import re
 import pycyc
 from nose.tools import raises, assert_is_instance
-from frame import Frame
+from pycyc.frame import Frame
 
 # This differs slightly from the attribute pattern defined in frame.py
 # as here we are validating python attribute names, not finding LISP slot
