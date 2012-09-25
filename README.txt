@@ -182,3 +182,7 @@ Distributed under the BSD license; see LICENSE.txt.
 AUTHOR
 ------
 Eli Bogart, elb87@cornell.edu
+
+ACKNOWLEDGEMENTS
+----------------
+Thanks to Chris Myers and Lukas Mueller for helpful comments.
