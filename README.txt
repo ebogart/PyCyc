@@ -1,5 +1,5 @@
-PyCyc 0.0.9
-September 18, 2012
+PyCyc 0.0.10
+September 25, 2012
 
 INTRODUCTION
 ------------
