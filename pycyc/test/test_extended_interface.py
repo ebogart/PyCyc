@@ -1401,3 +1401,20 @@ def test_is_class_all_sub_of():
     c3 = '|Genes|'
     assert ec.is_class_all_sub_of(c1,c2) == True
     assert not ec.is_class_all_sub_of(c1, c3)
+
+## TODO: fix test
+
+def test_annotations():
+    """ get_all_annots/get_value_annot/get_value_annots """
+    r = 'RXN0-5257'
+    substrate_with_coefficient = 'PROTON' # 2 
+    labels = ec.get_all_annots(r,'left',substrate_with_coefficient)
+    assert (sorted(map(str,labels)) == sorted(['COMPARTMENT','COEFFICIENT']))
+    values = ec.get_value_annots(r,'left',
+                                 substrate_with_coefficient,
+                                 'COEFFICIENT')
+    assert values == [2]
+    value = ec.get_value_annot(r,'left',
+                                substrate_with_coefficient,
+                                'COEFFICIENT')
+    assert value == 2

@@ -3820,3 +3820,64 @@ class PathwayToolsInterface(BasicPathwayToolsDBInterface):
         """
         # http://www.ai.sri.com/~gfp/spec/paper/node24.html#3471
         return self.call('delete-frame', frame)
+
+    #######################
+    # SLOT VALUE ANNOTATION
+
+    def get_all_annots(self, frame, slot, value):
+        """ Get all annotation labels in use for a value of frame of slot. 
+
+        Arguments
+        ---------
+        frame: a frame in this database
+        slot: string specifying a slot 
+        value: a value of the slot
+
+        Returns
+        -------
+        A list of slot value annotation labels, or None.
+
+        LISP equivalent: get-all-annots
+
+        """
+        return self.call('get-all-annots', frame, slot, value)
+
+    def get_value_annots(self, frame, slot, value, label):
+        """ List labeled annotations of a value of slot of frame. 
+
+        Arguments
+        ---------
+        frame: a frame in this database
+        slot: string specifying a slot 
+        value: a value of the slot
+        label: string specifying a label for annotations of the value 
+
+        Returns
+        -------
+        A list of annotations, or None.
+
+        LISP equivalent: get-value-annots
+       
+        """
+        return self.call('get-value-annots', frame, slot, value, label)
+
+
+    def get_value_annot(self, frame, slot, value, label):
+        """ Get one labeled annotation of a value of slot of frame. 
+
+        Arguments
+        ---------
+        frame: a frame in this database
+        slot: string specifying a slot 
+        value: a value of the slot
+        label: string specifying a label for annotations of the value 
+
+        Returns
+        -------
+        The annotation value, or None.
+
+        LISP equivalent: get-value-annot
+
+        """
+        return self.call('get-value-annot', frame, slot, value, label)
+
