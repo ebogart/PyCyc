@@ -82,6 +82,7 @@ genes-of-reaction, genes_of_reaction
 genes-regulated-by-gene, genes_regulated_by_gene
 genes-regulated-by-protein, genes_regulated_by_protein
 genes-regulating-gene, genes_regulating_gene
+get-all-annots, get_all_annots
 get-class-all-instances, get_class_all_instances
 get-class-all-subs, get_class_all_subs
 get-frame-labeled, get_frame_labeled
@@ -95,6 +96,8 @@ get-reaction-list, get_reaction_list
 get-slot-value, get_slot_value
 get-slot-values, get_slot_values
 get-successors, get_successors
+get-value-annot, get_value_annot
+get-value-annots, get_value_annots
 homomultimeric-containers-of, homomultimeric_containers_of
 inhibition-p, inhibition
 instance-all-instance-of-p, instance_all_instance_of
@@ -228,7 +231,7 @@ gfp: http://bioinformatics.ai.sri.com/ptools/gfp.html
 gfp-spec: http://www.ai.sri.com/~gfp/spec/paper/paper.html
 ptools-fns: http://bioinformatics.ai.sri.com/ptools/ptools-fns.html
 API: http://bioinformatics.ai.sri.com/ptools/api/
-
+Ocelot: http://www.ai.sri.com/pkarp/ocelot/
 
 
 
