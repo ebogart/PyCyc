@@ -27,6 +27,7 @@ trp_ecoli_2 = Frame('trp',ec)
 trp_meta = Frame('trp',meta)
 trp_single_value_slot = 'COMMON-NAME'
 trp_many_value_slot = 'SYNONYMS'
+trp_no_value_slot = 'SUPERATOMS'
 trp_untranslatable_slot = 'SCHEMA?'
 trp_empty_slot = 'SUPERATOMS'
 class_ = Frame('|Genes|',ec)
@@ -86,6 +87,7 @@ def test_test_frame():
 
 def test_slot_values():
     assert_is_instance(trp.slot_values(trp_single_value_slot), list)
+    assert_is_instance(trp.slot_values(trp_no_value_slot), list)
 
 def test_lists_of_values():
     assert not isinstance(trp[trp_single_value_slot], list)

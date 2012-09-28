@@ -165,7 +165,7 @@ class Frame():
 
         This function, a wrapper for the LISP function
         get-slot-values, returns a list even if only the slot has only
-        one value.
+        one value, or no values.
 
         """
         try:
@@ -183,6 +183,7 @@ class Frame():
             if not self._kb.is_slot(self, slot):
                 raise KeyError('Frame %s in database %s has no slot %s' % 
                                (self, self._kb, slot))
+            values = []
         return values
 
     def __setattr__(self, attribute, value):
