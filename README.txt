@@ -26,6 +26,11 @@ For the complete list of implemented LISP functions and their Python
 equivalents, see docs/functions.txt. Optional and keyword arguments are
 supported.
 
+PyCyc won't work under Windows, because the Pathway Tools API mode
+requires UNIX file sockets (see section 2.3.1 of the Pathway Tools
+user's guide). It has been tested under Linux, and should work on Mac
+as well.
+
 INSTALLATION
 ------------
 Run 'python setup.py install'.

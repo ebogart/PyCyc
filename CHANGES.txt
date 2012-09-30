@@ -1,3 +1,6 @@
+Development version --
+    change frame.slot_values to return an empty list when the slot is empty
+    update readme to prominently mention Windows is not supported
 v0.0.10, September 25, 2012 -- Add functions for working with slot value
 	 annotations.
 v0.0.9, September 18, 2012 -- Initial release.
